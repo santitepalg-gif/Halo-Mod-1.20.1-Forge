@@ -1,0 +1,44 @@
+name: Build mod
+
+on:
+  push:
+    branches: [main, master]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write   # necesario solo para publicar el .jar en un Release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      # No hace falta subir gradlew: este paso instala Gradle 8.8 y lo cachea.
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.8'
+
+      - name: Build
+        run: gradle build --no-daemon
+
+      - name: Subir el .jar como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: halo-mod
+          path: build/libs/*.jar
+          if-no-files-found: error
+
+      # Al subir un tag (ej. v0.1.0) se publica el .jar en Releases.
+      - name: Publicar Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/libs/*.jar
