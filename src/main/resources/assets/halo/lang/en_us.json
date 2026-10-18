@@ -1,0 +1,23 @@
+{
+  "itemGroup.halo.main": "Halo Covenant",
+  "entity.halo.phantom": "Phantom",
+  "item.halo.phantom_spawn_egg": "Phantom Spawn Egg",
+  "entity.halo.plasma_bolt": "Plasma Bolt",
+  "item.halo.plasma_rifle": "Plasma Rifle",
+  "item.halo.plasma_pistol": "Plasma Pistol",
+  "item.halo.assault_cannon": "Assault Cannon",
+  "entity.halo.elite_menor": "Elite Menor",
+  "item.halo.elite_menor_spawn_egg": "Elite Menor Spawn Egg",
+  "entity.halo.elite_mayor": "Elite Mayor",
+  "item.halo.elite_mayor_spawn_egg": "Elite Mayor Spawn Egg",
+  "entity.halo.grunt_menor": "Grunt Menor",
+  "item.halo.grunt_menor_spawn_egg": "Grunt Menor Spawn Egg",
+  "entity.halo.jackal": "Jackal",
+  "item.halo.jackal_spawn_egg": "Jackal Spawn Egg",
+  "entity.halo.brute_menor": "Brute Menor",
+  "item.halo.brute_menor_spawn_egg": "Brute Menor Spawn Egg",
+  "entity.halo.hunter_menor": "Hunter Menor",
+  "item.halo.hunter_menor_spawn_egg": "Hunter Menor Spawn Egg",
+  "entity.halo.hunter": "Hunter",
+  "item.halo.hunter_spawn_egg": "Hunter Spawn Egg"
+}
